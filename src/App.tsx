@@ -1,14 +1,17 @@
-import Message from "./Message";
+import Message from "./components/Message";
+import ListGroup from "./components/ListGroup";
 
-export default function App() {
+function App() {
   return (
     <>
       <h1>hii</h1>
       <Message />
+      <ListGroup />
     </>
   );
 }
 
+export default App;
 // import ListGroup from "./components/ListGroup";
 // function App() {
 //   let items = ["India", "M.P.", "U.P.", "Gujarat", "maharashtra"];
