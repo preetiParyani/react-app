@@ -1,50 +1,30 @@
-// import { useState } from "react";
-
-// interface Props {
-//   items: string[];
-//   heading: string;
-//   onSelectItem: (item: string) => void;
-// }
-
-// function ListGroup({ items, heading, onSelectItem }: Props) {
-//   const [selectedIndex, setSelectedIndex] = useState(-1);
-
-//   return (
-//     <>
-//       <h1>{heading}</h1>
-//       {items.length === 0 && <p>No item found</p>}
-//       <ul className="list-group">
-//         {items.map((item, index) => (
-//           <li
-//             className={
-//               selectedIndex === index
-//                 ? "list-group-item active"
-//                 : "list-group-item"
-//             }
-//             key={item}
-//             onClick={() => {
-//               setSelectedIndex(index);
-//               onSelectItem(item);
-//             }}
-//           >
-//             {item}
-//           </li>
-//         ))}
-//       </ul>
-//     </>
-//   );
-// }
-
 function ListGroup() {
+  const listItems = ["neech", "noad", "paak", "chandro", "nibhago"];
   return (
     <>
-      <h1>List</h1>
+      <h1>lyrics</h1>
+      {/* <ul className="list-group">
+        <li className="list-group-item">kitne</li>
+        <li className="list-group-item">dafe</li>
+        <li className="list-group-item">dil</li>
+        <li className="list-group-item">ne</li>
+        <li className="list-group-item">kaha</li>
+
+        <li className="list-group-item">
+          <b>kuch samaj aya konsa gaana hai?</b>
+        </li>
+      </ul> */}
+
+      {/* By the above way we can hard code a list but its being difficult if the list contains more number of elementsso we will try to be a little dynamic */}
+
       <ul className="list-group">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
+        {/* every item in jsx needs a key to make the browser know what part of the code is being updated
+         */}
+        {listItems.map((item) => (
+          <li key={item} className="list-group-item">
+            {item}
+          </li>
+        ))}
       </ul>
     </>
   );
