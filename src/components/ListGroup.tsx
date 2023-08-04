@@ -1,8 +1,20 @@
 function ListGroup() {
-  const listItems = ["neech", "noad", "paak", "chandro", "nibhago"];
+  let listItems = [
+    "Aao milo chale",
+    "tumse hi",
+    "kabhi alvida na kehna",
+    "chand sifarish",
+    "Naino ne bandhi keasi door",
+  ];
+  // listItems = [];
+
+  const getMessage = () => {
+    return listItems.length === 0 && <p>No items found</p>;
+  };
   return (
     <>
       <h1>lyrics</h1>
+      {getMessage()}
       {/* <ul className="list-group">
         <li className="list-group-item">kitne</li>
         <li className="list-group-item">dafe</li>
@@ -21,7 +33,11 @@ function ListGroup() {
         {/* every item in jsx needs a key to make the browser know what part of the code is being updated
          */}
         {listItems.map((item) => (
-          <li key={item} className="list-group-item">
+          <li
+            key={item}
+            className="list-group-item"
+            onClick={() => alert("clicked")}
+          >
             {item}
           </li>
         ))}
