@@ -1,11 +1,15 @@
 import Message from "./components/Message";
 import ListGroup from "./components/ListGroup";
+import DynamicListGroup from "./components/DynamicListGroup";
 
 function App() {
+  let items = ["bhopal", "indore", "jabalpur", "nagpur"];
+
   return (
     <>
       <Message />
       <ListGroup />
+      <DynamicListGroup items={items} heading="Cities" />
     </>
   );
 }

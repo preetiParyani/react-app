@@ -26,6 +26,7 @@ function ListGroup() {
   const getMessage = () => {
     return listItems.length === 0 && <p>No items found</p>;
   };
+
   return (
     <>
       <h1>lyrics</h1>
