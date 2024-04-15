@@ -1,12 +1,13 @@
 // import "./App.css";
 import React, { Component } from "react";
-import Message from "./components/Message";
+import ListGroup from "./components/ListGroup";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Message />
+        <h1>HUA? Ha ho gya.</h1>
+        <ListGroup />
       </div>
     );
   }
